@@ -1,0 +1,1 @@
+# chrome-extension-github-hide-comments
