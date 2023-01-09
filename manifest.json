@@ -1,0 +1,12 @@
+{
+  "name": "Pull requests hide comments",
+  "description": "Hide comments on the pull request 'Files changed' screen",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/pull/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
