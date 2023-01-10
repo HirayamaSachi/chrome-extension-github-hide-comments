@@ -4,3 +4,15 @@ var allChangedFileContainer = diffProgressiveContainer.querySelectorAll('[data-t
 for (ChangedFileContainer of allChangedFileContainer) {
     ChangedFileContainer.classList.remove('show-inline-notes');
 }
+
+// Show commentsのチェックを外す
+var dropDownMenu = document.getElementsByClassName('show-more-popover');
+for (let i = 0; i < dropDownMenu.length; i++) {
+    var toggleComments=dropDownMenu[i].querySelectorAll('[aria-checked="true"]');
+    if(toggleComments.length==0){
+        continue;
+    }
+    for (const toggleComment of toggleComments) {
+        toggleComment.ariaChecked=false;
+    }
+}
